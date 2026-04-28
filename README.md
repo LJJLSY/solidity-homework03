@@ -72,8 +72,8 @@ ETHERSCAN_API_KEY=xxxxx
 | `MetaNFTAuction.sol` | 主拍卖合约，实现拍卖逻辑 |
 | `MetaNFTAuctionV2.sol` | 升级版拍卖合约，演示升级功能 |
 | `MetaNFT.sol` | NFT 合约，用于测试 |
-| `MockERC20.sol` | ERC20 测试代币合约 |
-| `MockOracle.sol` | Chainlink 价格预言机 Mock 合约 |
+| `MetaERC20.sol` | ERC20 测试代币合约 |
+| `MetaOracle.sol` | Chainlink 价格预言机 mock合约 |
 
 ### 主要功能
 
