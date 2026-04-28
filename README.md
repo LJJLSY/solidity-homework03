@@ -222,18 +222,20 @@ npx hardhat ignition deploy ignition/modules/MetaNFTAuctionUpgradeModule.ts --ne
 
 ## 💻 交互脚本
 
-项目提供了两个交互脚本示例，分别使用 Ethers.js 和 Viem：
+项目提供了四个交互脚本示例，分别在本地网和测试网，各有一个实现合约和一个升级实现合约：
 
-### Ethers.js 版本
+### 本地网络
 
 ```bash
-npx hardhat run scripts/interact.ethers.ts
+npx hardhat run scripts/localhostinteract.ethers.ts --network localhost
+npx hardhat run scripts/localhostinteractV2.ethers.ts --network localhost
 ```
 
-### Viem 版本
+### 测试网络
 
 ```bash
-npx hardhat run scripts/interact.viem.ts
+npx hardhat run scripts/sepoliainteract.ethers.ts --network sepolia
+npx hardhat run scripts/sepoliainteractV2.ethers.ts --network sepolia
 ```
 
 ### 功能特性
