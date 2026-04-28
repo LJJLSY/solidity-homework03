@@ -1,0 +1,11 @@
+{
+  "MetaERC20Module#MetaERC20": "0x51fBd72668cF2dc4ebFe031A1F4A3aF5D11a8714",
+  "MetaNFTAuctionProxyModule#MetaNFTAuction": "0xD62517655d4c5180847c0e8aB9b622d052c7A4f4",
+  "MetaNFTModule#MetaNFT": "0x0Dea90663b061eB523F0a955d5c33D3AF406697F",
+  "MetaOracleModule#MetaOracle": "0xd7Ac8AF96d71E0F5f7b489d3aA1A7F9484099a66",
+  "MetaNFTAuctionProxyModule#TransparentUpgradeableProxy": "0xA2Fb972a40D6fA4e0f8e41754f74E8cB10f1AA60",
+  "MetaNFTAuctionProxyModule#ProxyAdmin": "0x394247458919C4410fc870BF05E1e3117b3c96cD",
+  "MetaNFTAuctionModule#MetaNFTAuction": "0xA2Fb972a40D6fA4e0f8e41754f74E8cB10f1AA60",
+  "MetaNFTAuctionUpgradeModule#MetaNFTAuctionV2AtProxy": "0xA2Fb972a40D6fA4e0f8e41754f74E8cB10f1AA60",
+  "MetaNFTAuctionUpgradeModule#MetaNFTAuctionV2": "0xFd77C10A8f46430E01d1F04E7ca40eCf4C44C8AC"
+}

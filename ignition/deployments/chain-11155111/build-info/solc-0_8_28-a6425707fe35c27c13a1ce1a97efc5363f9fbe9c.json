@@ -1,0 +1,49 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-a6425707fe35c27c13a1ce1a97efc5363f9fbe9c",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "compilerType": "solc",
+  "toolVersions": {
+    "hardhat": "3.4.0"
+  },
+  "userSourceNameMap": {
+    "contracts/MetaOracle.sol": "project/contracts/MetaOracle.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode.linkReferences",
+            "evm.bytecode.object",
+            "evm.bytecode.opcodes",
+            "evm.bytecode.sourceMap",
+            "evm.deployedBytecode.immutableReferences",
+            "evm.deployedBytecode.linkReferences",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.opcodes",
+            "evm.deployedBytecode.sourceMap",
+            "evm.methodIdentifiers"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/MetaOracle.sol": {
+        "content": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.28;\r\n\r\ncontract MetaOracle {\r\n    int256 private price;\r\n    constructor(int256 initialPrice) {\r\n        price = initialPrice;\r\n    }\r\n\r\n    function setPrice(int256 newPrice) external {\r\n        price = newPrice;\r\n    }\r\n\r\n    function getPrice() public view returns(int256) {\r\n        return price;\r\n    }\r\n    \r\n    function latestRoundData() \r\n        external\r\n        view\r\n        returns(\r\n            uint80 roundId, \r\n            int256 answer, \r\n            uint256 startedAt, \r\n            uint256 updatedAt, \r\n            uint80 answeredInRound\r\n            )\r\n    {\r\n        return (uint80(1),price,block.timestamp,block.timestamp,uint80(1));\r\n    }\r\n}"
+      }
+    }
+  }
+}
