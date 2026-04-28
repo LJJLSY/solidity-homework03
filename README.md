@@ -164,14 +164,14 @@ Running Mocha tests
 npx hardhat node
 
 # 在新终端部署合约
-npx hardhat ignition deploy ignition/modules/MetaNFTAuctionProxyModule.ts --network localhost
+npx hardhat ignition deploy ignition/modules/AllContractsModule.ts --network localhost
 ```
 
 ### 测试网部署
 
 ```bash
 # 配置 hardhat.config.ts 中的网络信息
-npx hardhat ignition deploy ignition/modules/MetaNFTAuctionProxyModule.ts --network sepolia
+npx hardhat ignition deploy ignition/modules/AllContractsModule.ts --network sepolia
 ```
 
 ### 部署模块说明
@@ -180,24 +180,28 @@ npx hardhat ignition deploy ignition/modules/MetaNFTAuctionProxyModule.ts --netw
 
 | 模块 | 说明 |
 |------|------|
+| `AllContractsModule.ts` | 部署所有合约，包含拍卖合约（透明代理模式）、NFT合约、代币合约、Oracle合约 |
 | `MetaNFTAuctionProxyModule.ts` | 部署拍卖合约（透明代理模式） |
 | `MetaNFTAuctionUpgradeModule.ts` | 升级拍卖合约到 V2 版本 |
 | `MetaNFT.ts` | 部署 NFT 合约 |
-| `MetaNFTAuction.ts` | 部署拍卖合约（无代理） |
-| `MetaNFTAuctionV2.ts` | 部署升级版拍卖合约 |
+| `MetaERC20.ts` | 部署代币合约 |
+| `MetaOracle.ts` | 部署价格预言机mock合约 |
 
 ### 部署流程
 
 **首次部署（透明代理模式）：**
 
 ```bash
-npx hardhat ignition deploy ignition/modules/MetaNFTAuctionProxyModule.ts --network <network-name>
+npx hardhat ignition deploy ignition/modules/AllContractsModule.ts --network <network-name>
 ```
 
 这将部署：
 1. MetaNFTAuction 实现合约
 2. TransparentUpgradeableProxy 代理合约
 3. ProxyAdmin 管理合约
+4. MetaNFT NFT合约
+5. MetaERC20 代币合约
+6. MetaOracle 价格预言机mock合约
 
 **合约升级：**
 
