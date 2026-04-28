@@ -214,20 +214,23 @@ npx hardhat run scripts/interact.viem.ts
 
 ```
 nft-auction-demo/
+├── artifacts/              # 编译产物
+├── cache/                  # 编译缓存
 ├── contracts/              # 智能合约
+│   ├── MetaERC20.sol
+│   ├── MetaNFT.sol
 │   ├── MetaNFTAuction.sol
 │   ├── MetaNFTAuctionV2.sol
-│   ├── MetaNFT.sol
-│   ├── MockERC20.sol
-│   └── MockOracle.sol
-├── test/                   # 测试文件
-│   ├── MetaNFTAuction.t.sol      # Solidity 测试
-│   ├── MetaNFTAuction.ethers.ts  # Ethers.js 测试
-│   └── MetaNFTAuction.viem.ts    # Viem 测试
+│   └── MetaOracle.sol
+├── coverage/               # 测试结果
+├── ignition/               # 部属文件
 ├── scripts/                # 脚本
-│   ├── interact.ethers.ts  # Ethers.js 交互脚本
-│   ├── interact.viem.ts    # Viem 交互脚本
-│   └── README.md           # 脚本使用说明
+│   ├── localhostinteract.ethers.ts  # localhost 交互脚本
+│   ├── localhostinteractV2.ethers.ts  # localhost 升级合约交互脚本
+│   ├── sepoliainteract.ethers.ts  # sepolia 交互脚本
+│   ├── sepoliainteractV2.ethers.ts  # sepolia 升级合约交互脚本
+├── test/                   # 测试文件
+│   ├── MetaNFTAuction.ethers.ts  # Ethers.js 测试
 ├── hardhat.config.ts       # Hardhat 配置
 ├── package.json
 └── README.md
