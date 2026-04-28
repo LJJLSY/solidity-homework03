@@ -95,17 +95,8 @@ ETHERSCAN_API_KEY=xxxxx
 # 编译合约
 npx hardhat compile
 
-# 运行 Solidity 测试
-npx hardhat test
-
 # 运行 Ethers.js 测试
 npx hardhat test test/MetaNFTAuction.ethers.ts
-
-# 运行 Viem 测试
-npx hardhat test test/MetaNFTAuction.viem.ts
-
-# 运行所有测试
-npx hardhat test test/MetaNFTAuction.ethers.ts test/MetaNFTAuction.viem.ts
 ```
 
 ### 测试覆盖
@@ -120,6 +111,47 @@ npx hardhat test test/MetaNFTAuction.ethers.ts test/MetaNFTAuction.viem.ts
 - ✅ 拍卖结束逻辑
 - ✅ 合约升级功能
 - ✅ 升级后功能验证
+
+### 测试结果
+```
+npx hardhat test test/MetaNFTAuction.ethers.ts --coverage
+
+Compiled 7 Solidity files with solc 0.8.28 (evm target: cancun)
+Running Mocha tests
+
+
+  MetaNFTAuction
+    getVersion
+      ✔ should return MetaNFTAuctionV1
+    getPriceInDollar
+      ✔ should return correct prices
+    initialize
+      ✔ should fail when initialized twice
+    start
+      ✔ should increment auctionId
+    bid
+      ✔ should fail when auction has ended
+      ✔ should fail when bid is lower than highest bid
+      ✔ should correctly track bidding result (44ms)
+    end
+      ✔ should fail when auction is not ended
+      ✔ balance and nft owner should correctly changed when auction has ended
+      ✔ usdc balance should correctly changed when auction has ended
+    upgrade
+      ✔ should upgrade contract successfully
+      ✔ should fail when non-admin tries to upgrade
+      ✔ should change oracle after upgrade
+
+
+  13 passing (3s)
+
+
+13 passing (13 mocha)
+```
+
+### 测试覆盖率
+<img width="972" height="384" alt="image" src="https://github.com/user-attachments/assets/1973e8e6-66d3-4811-966f-4fa18759e5d8" />
+
 
 ## 🚀 部署
 
