@@ -264,6 +264,14 @@ npx hardhat run scripts/sepoliainteractV2.ethers.ts --network sepolia
    - 新功能可用
    - 权限控制正确
 
+## 🔐 注意事项
+
+1. **私钥管理**：永远不要将私钥提交到版本控制系统
+2. **权限控制**：管理员权限需要妥善保管
+3. **Oracle 配置**：生产环境需要使用真实的 Chainlink 价格预言机
+4. **NFT 授权**：启动拍卖前，卖家需要先授权合约操作其 NFT
+5. **Gas 费用**：确保账户有足够的 ETH 支付 gas 费用
+
 ## 📁 项目结构
 
 ```
