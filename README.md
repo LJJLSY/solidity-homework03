@@ -1,4 +1,4 @@
-# NFT Auction Demo
+# NFT Demo
 
 一个基于以太坊的 NFT 拍卖智能合约项目，支持多种代币出价、Chainlink 价格预言机集成，以及可升级合约架构。
 
@@ -16,12 +16,11 @@
 
 - **开发框架**: Hardhat v3
 - **智能合约**: Solidity 0.8.28
-- **合约库**: OpenZeppelin Contracts v5.4.0
+- **合约库**: OpenZeppelin Contracts v5.6.1
 - **价格预言机**: Chainlink
 - **测试框架**: 
-  - Hardhat + Mocha (Solidity 测试)
+  - Hardhat + Mocha
   - Ethers.js v6
-  - Viem v2
 - **类型支持**: TypeScript
 
 ## 📦 安装
@@ -29,7 +28,7 @@
 ```bash
 # 克隆项目
 git clone <repository-url>
-cd nft-auction-demo
+cd nft-demo
 
 # 安装依赖
 npm install
@@ -41,9 +40,27 @@ npm install
 
 ```env
 # 合约交互脚本配置
-AUCTION_ADDRESS=0x你的合约地址
+//合约地址(sepolia)
+AUCTION_ADDRESS=0xA2Fb972a40D6fA4e0f8e41754f74E8cB10f1AA60
+
+//本地网络
 RPC_URL=http://127.0.0.1:8545
-PRIVATE_KEY=0x你的私钥
+
+//localhost私钥，从localhost提供的账户获取
+PRIVATE_KEY_1=xxxxx
+PRIVATE_KEY_2=xxxxx
+PRIVATE_KEY_3=xxxxx
+
+//sepolia网络
+SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/<密钥>
+
+//sepolia私钥，从metamask获取
+SEPOLIA_PRIVATE_KEY_1=xxxxx
+SEPOLIA_PRIVATE_KEY_2=xxxxx
+SEPOLIA_PRIVATE_KEY_3=xxxxx
+
+// Etherscan API Key 用于合约验证
+ETHERSCAN_API_KEY=xxxxx
 ```
 
 ## 📄 合约说明
