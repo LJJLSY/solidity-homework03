@@ -240,12 +240,11 @@ npx hardhat run scripts/sepoliainteractV2.ethers.ts --network sepolia
 
 ### 功能特性
 
-- 查询合约状态（版本、拍卖ID、拍卖详情等）
-- 发送交易（设置Oracle、启动拍卖、出价、结束拍卖）
+- 查询合约版本、拍卖ID、管理员地址
+- 查询拍卖详情（NFT信息、卖家、时间、价格等）
+- 查询拍卖状态和价格信息
+- 交易操作示例（设置Oracle、启动拍卖、出价、结束拍卖）
 - 事件监听示例
-- 完整的错误处理
-
-详细使用说明请参考 [scripts/README.md](scripts/README.md)
 
 ## 🔄 合约升级
 
