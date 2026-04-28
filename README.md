@@ -173,6 +173,10 @@ npx hardhat ignition deploy ignition/modules/AllContractsModule.ts --network loc
 # 配置 hardhat.config.ts 中的网络信息
 npx hardhat ignition deploy ignition/modules/AllContractsModule.ts --network sepolia
 ```
+```bash
+# 部署到测试网的合约地址
+0xA2Fb972a40D6fA4e0f8e41754f74E8cB10f1AA60
+```
 
 ### 部署模块说明
 
