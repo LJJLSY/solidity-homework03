@@ -23,6 +23,32 @@
   - Ethers.js v6
 - **类型支持**: TypeScript
 
+## 📁 项目结构
+
+```
+nft-auction-demo/
+├── artifacts/              # 编译产物
+├── cache/                  # 编译缓存
+├── contracts/              # 智能合约
+│   ├── MetaERC20.sol
+│   ├── MetaNFT.sol
+│   ├── MetaNFTAuction.sol
+│   ├── MetaNFTAuctionV2.sol
+│   └── MetaOracle.sol
+├── coverage/               # 测试结果
+├── ignition/               # 部属文件
+├── scripts/                # 脚本
+│   ├── localhostinteract.ethers.ts  # localhost 交互脚本
+│   ├── localhostinteractV2.ethers.ts  # localhost 升级合约交互脚本
+│   ├── sepoliainteract.ethers.ts  # sepolia 交互脚本
+│   ├── sepoliainteractV2.ethers.ts  # sepolia 升级合约交互脚本
+├── test/                   # 测试文件
+│   ├── MetaNFTAuction.ethers.ts
+├── hardhat.config.ts       # Hardhat 配置
+├── package.json
+└── README.md
+```
+
 ## 📦 安装
 
 ```bash
@@ -275,29 +301,3 @@ npx hardhat run scripts/sepoliainteractV2.ethers.ts --network sepolia
 3. **Oracle 配置**：生产环境需要使用真实的 Chainlink 价格预言机
 4. **NFT 授权**：启动拍卖前，卖家需要先授权合约操作其 NFT
 5. **Gas 费用**：确保账户有足够的 ETH 支付 gas 费用
-
-## 📁 项目结构
-
-```
-nft-auction-demo/
-├── artifacts/              # 编译产物
-├── cache/                  # 编译缓存
-├── contracts/              # 智能合约
-│   ├── MetaERC20.sol
-│   ├── MetaNFT.sol
-│   ├── MetaNFTAuction.sol
-│   ├── MetaNFTAuctionV2.sol
-│   └── MetaOracle.sol
-├── coverage/               # 测试结果
-├── ignition/               # 部属文件
-├── scripts/                # 脚本
-│   ├── localhostinteract.ethers.ts  # localhost 交互脚本
-│   ├── localhostinteractV2.ethers.ts  # localhost 升级合约交互脚本
-│   ├── sepoliainteract.ethers.ts  # sepolia 交互脚本
-│   ├── sepoliainteractV2.ethers.ts  # sepolia 升级合约交互脚本
-├── test/                   # 测试文件
-│   ├── MetaNFTAuction.ethers.ts
-├── hardhat.config.ts       # Hardhat 配置
-├── package.json
-└── README.md
-```
