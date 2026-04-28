@@ -230,7 +230,7 @@ nft-auction-demo/
 │   ├── sepoliainteract.ethers.ts  # sepolia 交互脚本
 │   ├── sepoliainteractV2.ethers.ts  # sepolia 升级合约交互脚本
 ├── test/                   # 测试文件
-│   ├── MetaNFTAuction.ethers.ts  # Ethers.js 测试
+│   ├── MetaNFTAuction.ethers.ts
 ├── hardhat.config.ts       # Hardhat 配置
 ├── package.json
 └── README.md
